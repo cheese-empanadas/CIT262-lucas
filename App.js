@@ -99,7 +99,7 @@ const App = () => {
               const sessionToken = await loginResponse.text();
               await AsyncStorage.setItem("sessionToken", sessionToken);
             } else {
-              console.log("response status", loginReponse.status);
+              console.log("response status", loginResponse.status);
               Alert.alert("Invalid", "Invalid Login information");
               setLoggedInState(NOT_LOGGED_IN);
             }
